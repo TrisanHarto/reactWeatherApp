@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import DayWeather from "./Weather/DayWeather";
 import Forecast from "./Weather/Forecast";
-import Weather from "./Weather/Weather";
 
 function App() {
 	return (
