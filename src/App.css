@@ -1,0 +1,140 @@
+.App {
+	text-align: Center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	justify-content: center;
+}
+
+.day {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(198, 222, 198);
+	border: 1px solid green;
+	width: 8em;
+	height: 15em;
+}
+
+.day:hover {
+	background-color: rgb(198, 222, 198);
+	width: 16em;
+	height: 22em;
+}
+.description {
+	display: flex;
+}
+
+.temp-high {
+	padding: 0.3rem;
+	color: rgb(2, 37, 2);
+}
+
+.temp-low {
+	padding: 0.3rem;
+	color: rgb(56, 141, 56);
+}
+
+.container1:before {
+	content: "";
+	background: url("./pictures/yoda.jpg") no-repeat center center/cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.app .search {
+	text-align: Center;
+	padding: 1rem;
+}
+
+.app input {
+	padding: 0.7rem 1.5rem;
+	font-size: 1.2rem;
+	border-radius: 25px;
+	border: 1px solid rgba(2, 112, 2, 0.8);
+	background: rgb(255, 255, 255);
+}
+
+.container1 {
+	max-width: 700px;
+	height: 700px;
+	margin: auto;
+	padding: 0 1rem;
+	position: relative;
+	top: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-weight: 700;
+	color: aliceblue;
+}
+
+.container1 .top {
+	width: 100%;
+	margin: 1rem auto;
+}
+
+.container1 .description {
+	position: relative;
+	right: -90%;
+	transform-origin: 0 0;
+	font-weight: 700;
+	color: aliceblue;
+}
+
+.container1 .bottom {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+	width: 100%;
+	margin: 1rem auto;
+	padding: 1rem;
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bottom {
+	font-weight: 700;
+	color: aliceblue;
+}
