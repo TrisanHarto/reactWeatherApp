@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function DayWeather() {
 	const [data, setData] = useState({});
 	const [location, setLocation] = useState("");
+	const navigate = useNavigate();
+
+	const navigateToForecast = () => {
+		// 👇️ navigate to home
+		navigate("/forecast");
+	};
 
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=18b4965d98e86492de87fc8ab0ed7e3d`;
 
@@ -28,6 +35,7 @@ function DayWeather() {
 					type="text"
 				/>
 			</div>
+			<button onClick={navigateToForecast}>Forecast</button>
 			<br></br>
 			<div className="container1">
 				<div className="top">
