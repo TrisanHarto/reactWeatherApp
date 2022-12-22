@@ -8,7 +8,6 @@ function DayWeather() {
 	const navigate = useNavigate();
 
 	const navigateToForecast = () => {
-		// 👇️ navigate to home
 		navigate("/forecast");
 	};
 
@@ -36,6 +35,7 @@ function DayWeather() {
 				/>
 			</div>
 			<button onClick={navigateToForecast}>Forecast</button>
+			<br></br>
 			<br></br>
 			<div className="container1">
 				<div className="top">

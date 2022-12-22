@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Forecast() {
 	const [data, setData] = useState({});
 	const [location, setLocation] = useState("");
+	const navigate = useNavigate();
+
+	const navigateToHome = () => {
+		// 👇️ navigate to home
+		navigate("/");
+	};
 
 	const url = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${location}&cnt=7&&units=imperial&appid=18b4965d98e86492de87fc8ab0ed7e3d`;
 
@@ -24,7 +31,7 @@ function Forecast() {
 					value={location}
 					onChange={(event) => setLocation(event.target.value)}
 					onKeyPress={searchLocation}
-					placeholder="6 days, it shall be"
+					placeholder="Enter city you shall"
 					type="text"
 				/>
 			</div>
@@ -130,6 +137,8 @@ function Forecast() {
 					</div>
 				</div>
 			</div>
+			<br></br>
+			<button onClick={navigateToHome}>Home</button>
 		</div>
 	);
 }
